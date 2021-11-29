@@ -65,7 +65,7 @@ CREATE TABLE `notas` (
 
 LOCK TABLES `notas` WRITE;
 /*!40000 ALTER TABLE `notas` DISABLE KEYS */;
-INSERT INTO `notas` VALUES (1,'venta ','venta de auto',1),(2,'buscar','buscar vivienda',2),(3,'salida','salir a comer',3),(4,'comprar','productos de jardineria',4),(5,'gimnasio','rutina del gim',5);
+INSERT INTO `notas` VALUES (1,'venta ','venta de auto',1),(2,'buscar','buscar vivienda',2),(3,'salida','salir a comer',3),(4,'comprar','productos de jardineria',4),(5,'gimnasio','rutina del gim',5),(6,'correr','salir a correr por la mañana',6),(7,'cumpleaños','ir a el cumpleaños de mi mamá',7),(8,'comprar herramienta','comprar  el taladro',8),(9,'caminar ','salir a recorrer el centro',9),(10,'comprar','comprar un carburador para podadora',10);
 /*!40000 ALTER TABLE `notas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,7 +85,7 @@ CREATE TABLE `notas_caracteristicas` (
   KEY `caracteristicas_id_idx` (`caracteristicas_id`),
   CONSTRAINT `caracteristicas_id` FOREIGN KEY (`caracteristicas_id`) REFERENCES `caracteristicas` (`id`),
   CONSTRAINT `notas_id` FOREIGN KEY (`notas_id`) REFERENCES `notas` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +94,7 @@ CREATE TABLE `notas_caracteristicas` (
 
 LOCK TABLES `notas_caracteristicas` WRITE;
 /*!40000 ALTER TABLE `notas_caracteristicas` DISABLE KEYS */;
-INSERT INTO `notas_caracteristicas` VALUES (1,1,3),(2,2,2),(3,3,1),(4,4,3),(5,5,1);
+INSERT INTO `notas_caracteristicas` VALUES (1,1,3),(2,2,2),(3,3,1),(4,4,3),(5,5,1),(6,6,1),(7,7,2),(8,8,3),(9,9,1),(10,10,3);
 /*!40000 ALTER TABLE `notas_caracteristicas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,7 +121,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'federico','riquelme','federiquelme@gmail.com'),(2,'camila ','abigail','cami07@gmail.com'),(3,'mirtha','valen','titi@gmail.com'),(4,'maria','lujan','marilu@gmail.com'),(5,'emma','ada','emma@gmail.com');
+INSERT INTO `usuarios` VALUES (1,'federico','riquelme','federiquelme@gmail.com'),(2,'camila ','abigail','cami07@gmail.com'),(3,'mirtha','valen','titi@gmail.com'),(4,'maria','lujan','marilu@gmail.com'),(5,'emma','ada','emma@gmail.com'),(6,'rodrigo','delia','delia@gmail.com'),(7,'marcos ','perez','marcos@gmail.com'),(8,'gonzalo ','dicarpi','gonza@gmail.com'),(9,'fernando','mercado','fernandomercado@gmail.com'),(10,'tamara','solis','solistami@gmail.com');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -134,4 +134,5 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-28 21:19:13
+-- Dump completed on 2021-11-29  3:10:51
+
